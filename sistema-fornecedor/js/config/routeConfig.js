@@ -21,11 +21,14 @@ angular.module("sistemaFornecedor").config(function($routeProvider){
         });
         
         $routeProvider.when("/pedido/:id",{
-            templateUrl:"view/pedido-detalhe.html" ,
+            templateUrl:"view/pedidosDetalhe.html" ,
             controller: "paginaPedidoCtrl" ,
             resolve:{
-                    receita: function(pedidosAPI, $route){
+                    pedido: function(pedidosAPI, $route){
                             return pedidosAPI.getPedido($route.current.params.id);
+                    },
+                    itens: function(pedidosAPI){
+                            return pedidosAPI.getItens();
                     }
             }
         });

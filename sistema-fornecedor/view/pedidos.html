@@ -1,10 +1,13 @@
-<table class="table">
+<h2>Pedidos</h2>
+<table class="table table-bordered table-hover">
       <tr>        
         <th>Código</th>
-        <th>Cliente</th>                
+        <th>Cliente</th>
+        <th></th>                
       </tr>
-      <tr ng-repeat="pedido in pedidos">        
-        <td>{{pedido.codigo}}</td>
-        <td>{{pedido.cliente.nome}}</td>
+      <tr ng-repeat="pedido in pedidos"> 
+	        <td>{{pedido.codigo}}</td>
+        	<td>{{pedido.cliente.nome}}</td>
+    		<td><a href="#/pedido/{{pedido.codigo}}"><button class="btn btn-success glyphicon glyphicon-eye-open"></button></a></td>
       </tr>
 </table>
