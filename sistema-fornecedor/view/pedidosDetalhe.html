@@ -2,6 +2,7 @@
 <br>
 <p><strong>Número:</strong> {{pedido.codigo}}</p>
 <p><strong>Cliente: </strong>{{pedido.cliente.codigo}} - {{pedido.cliente.nome}}</p>
+<p><strong>Data Criação: </strong>{{pedido.dataCriacao}}</p>
 <br>
 <h3>Itens:</h3>
 <table class="table table-bordered table-hover">
@@ -15,8 +16,8 @@
       <tr ng-repeat="item in itens| filter:{pedido: pedido}">        
         <td>{{item.codigo}}</td>
         <td>{{item.pedido.codigo}}</td>
-        <td>{{item.descricao}}</td>
-        <td>{{item.marca}}</td>
+        <td>{{item.produto.descricao}}</td>
+        <td>{{item.produto.marca}}</td>
         <td>{{item.quantidade}}</td>
       </tr>
 </table>
