@@ -1,0 +1,10 @@
+<table class="table">
+      <tr>        
+        <th>Código</th>
+        <th>Cliente</th>                
+      </tr>
+      <tr ng-repeat="pedido in pedidos">        
+        <td>{{pedido.codigo}}</td>
+        <td>{{pedido.cliente.nome}}</td>
+      </tr>
+</table>

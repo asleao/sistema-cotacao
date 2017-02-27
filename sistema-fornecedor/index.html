@@ -1,0 +1,38 @@
+<html ng-app="sistemaFornecedor">
+<head>
+  <meta charset="UTF-8" />
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="lib/angular/angular.js"></script>
+  <script type="text/javascript" src="lib/angular/angular-messages.js"></script>
+  <script type="text/javascript" src="lib/angular/angular-route.js"></script>
+  <script type="text/javascript" src="lib/angular/i18n/angular-locale_pt-br.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/pedidos.css">
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css">
+  <script type="text/javascript" src="lib/jquery/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="lib/bootstrap/js/bootstrap.js"></script>  
+  <script type="text/javascript" src="js/app.js"></script>  
+  <script type="text/javascript" src="js/controllers/indexCtrl.js"></script>
+  <script type="text/javascript" src="js/controllers/clienteCtrl.js"></script>
+  <script type="text/javascript" src="js/controllers/pedidoCtrl.js"></script>
+  <script type="text/javascript" src="js/services/clientesAPIService.js"></script>
+  <script type="text/javascript" src="js/services/pedidosAPIService.js"></script>  
+  <script type="text/javascript" src="js/value/config.js"></script>
+  <script type="text/javascript" src="js/config/routeConfig.js"></script>
+
+  
+
+  <title>Sistema Fornecedor</title>
+</head>
+<body >
+  <div ng-include="'view/navbar.html'"></div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12">
+        <div ng-view></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
