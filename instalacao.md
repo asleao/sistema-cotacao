@@ -1,16 +1,16 @@
-```
-Instalação do sistema
+```markdown
+#Instalação do sistema
 ```
 
-```
+```markdown
 Todos os comandos serão executados utilizando um ambiente linux e o editor de texto Sublime Text.
 
 ## Pré Requisitos:
-	
+
 * **Python3**
 * **python3-dev**
 * **libpq-dev**
-* **Virtualenv**	
+* **Virtualenv**    
 
 ## Instalação
 
@@ -18,39 +18,35 @@ Todos os comandos serão executados utilizando um ambiente linux e o editor de t
 
 Faça o download do projeto no [link](https://github.com/asleao/sistema-cotacao.git) ou se possuir o git instalado execute o comando abaixo na pasta em que deseja salvar o projeto.
 
-	git clone https://github.com/asleao/sistema-cotacao.git
+    git clone https://github.com/asleao/sistema-cotacao.git
 
 Em seguida vá até a pasta onde o projeto foi salvo e crie o ambiente virtual python com o seguinte comando:
-	
-	virtualenv -p python3 env
+
+    virtualenv -p python3 env
 
 Ative-o:
 
-	source env/bin/activate
+    source env/bin/activate
 
 Instale as dependências:
 
-	pip install -r requirements.txt
+    pip install -r requirements.txt
 
 Para criar as tabelas no banco, execute o comando:
 
-	python3 manage.py migrate
+    python3 manage.py migrate
 
 ### Administração
 
 Para criar um usuário adminstrador execute o comando:
 
-	python3 manage.py createsuperuser
+    python3 manage.py createsuperuser
 
 ### Execução
 
 Para executar o projeto, em um terminal, execute o seguinte comando:
 
-	python3 manage.py runserver
-
-
-
-
+    python3 manage.py runserver
 ```
 
 
