@@ -12,11 +12,7 @@
 Faça o download do projeto no [link](https://github.com/asleao/sistema-cotacao.git) ou se possuir o git instalado execute o comando abaixo na pasta em que deseja salvar o projeto.
 
 ```bash
-git clone https://github.com/asleao/sistema-cotacao.git    
-```
-
-```markdown
-
+git clone https://github.com/asleao/sistema-cotacao.git
 ```
 
 Em seguida vá até a pasta onde o projeto foi salvo e crie o ambiente virtual python com o seguinte comando:
