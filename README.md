@@ -1,6 +1,6 @@
 # Bem Vindo
 
-\[!\[Build Status\]\(https://travis-ci.org/asleao/sistema-cotacao.png\)\]\(https://travis-ci.org/asleao/sistema-cotacao\)
+\[!\[Build Status\]\([https://travis-ci.org/asleao/sistema-cotacao.png\)\(https://travis-ci.org/asleao/sistema-cotacao](https://travis-ci.org/asleao/sistema-cotacao.png%29]%28https://travis-ci.org/asleao/sistema-cotacao\)\)
 
 Este projeto irá desenvolver uma API para um sistema de cotação utilizando a linguagem Python e o framework Django.
 
