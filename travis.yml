@@ -1,0 +1,27 @@
+language: python
+python:
+  - '3.5'
+jdk:
+  - oraclejdk8
+addons:
+  apt:
+    packages:
+      - oracle-java8-installer
+  sonarqube: true
+  
+env:
+  global:
+  - secure:$SONAR_TOKEN 
+  
+branches:
+  only:
+  - master
+
+install:
+  - pip install -r requirements.txt
+
+before_script:
+  - export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+
+script:
+  - sonar-scanner -Dsonar.login=$SONAR_TOKEN 
