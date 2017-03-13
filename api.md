@@ -6,6 +6,16 @@ O sistema cotação está hospedado no endereço [http://asleao.pythonanywhere.c
 
 Abaixo a lista de rodas disponibilizadas:
 
+**Produtos:**
+
+* Listagem de todos os produtos:[http://asleao.pythonanywhere.com/cotacao/produto/?format=json](http://asleao.pythonanywhere.com/cotacao/cliente/?format=json)
+* Listagem de 1 produto espercífico: [http://asleao.pythonanywhere.com/cotacao/](http://asleao.pythonanywhere.com/cotacao/cliente/<código_cliente>/?format=json)[produto](http://asleao.pythonanywhere.com/cotacao/cliente/?format=json)[/&lt;código\_produto&gt;/?format=json](http://asleao.pythonanywhere.com/cotacao/cliente/<código_cliente>/?format=json)
+
+**Clientes:**
+
+* Listagem de todos os clientes:[http://asleao.pythonanywhere.com/cotacao/cliente/?format=json](http://asleao.pythonanywhere.com/cotacao/cliente/?format=json)
+* Listagem de 1 cliente espercífico: [http://asleao.pythonanywhere.com/cotacao/cliente/&lt;código\_cliente&gt;/?format=json](http://asleao.pythonanywhere.com/cotacao/cliente/<código_cliente>/?format=json)
+
 **Pedido:**
 
 * Listagem de todos os pedidos: [http://asleao.pythonanywhere.com/cotacao/pedido/?format=json](http://asleao.pythonanywhere.com/cotacao/pedido/?format=json)
@@ -16,10 +26,7 @@ Abaixo a lista de rodas disponibilizadas:
 * Listagem de todos os itens: [http://asleao.pythonanywhere.com/cotacao/item/?format=json](http://asleao.pythonanywhere.com/cotacao/item/?format=json)
 * Listagem de 1 item específico: [http://asleao.pythonanywhere.com/cotacao/item/&lt;código\_item&gt;/?format=json](http://asleao.pythonanywhere.com/cotacao/item/<código_item>/?format=json)
 
-**Clientes:**
 
-* Listagem de todos os clientes:[http://asleao.pythonanywhere.com/cotacao/cliente/?format=json](http://asleao.pythonanywhere.com/cotacao/cliente/?format=json)
-* Listagem de 1 cliente espercífico: [http://asleao.pythonanywhere.com/cotacao/cliente/&lt;código\_cliente&gt;/?format=json](http://asleao.pythonanywhere.com/cotacao/cliente/<código_cliente>/?format=json)
 
 
 
