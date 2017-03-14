@@ -33,6 +33,10 @@ angular.module("sistemaFornecedor").config(function($routeProvider){
             }
         });
 
+        $routeProvider.when("/pedido/adicionar",{
+            templateUrl:"view/adicionarPedido.html" ,
+            controller: "pedidoCtrl"                         
+        });
 
         $routeProvider.otherwise({redirectTo: "/index"});      
 });

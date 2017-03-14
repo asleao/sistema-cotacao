@@ -25,7 +25,7 @@ SECRET_KEY = 'd012&g((-&2+i(7av@pra^p*tupad1h+7kzqdy_z)bekts*o!+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['asleao.pythonanywhere.com']
+ALLOWED_HOSTS = ['asleao.pythonanywhere.com','localhost']
 
 
 # Application definition

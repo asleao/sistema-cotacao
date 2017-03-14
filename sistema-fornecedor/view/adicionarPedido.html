@@ -1,0 +1,24 @@
+<h2>Adicionar Pedido</h2>
+         
+<form name="formCadastroPedido">                    
+        <div class="form-group">
+                <label for="cliente">Cliente</label>
+                <select class="form-control" ng-model="pedido.cliente" ng-options="cliente.nome for cliente in clientes">
+					<option value="">Selecione um cliente</option>
+				</select>
+        </div>
+
+        <div class="form-group">
+                <label for="produto">Produto</label>
+                <select class="form-control" ng-model="item.produto" ng-options="produto.nome for produto in produtos">
+					<option value="">Selecione um Produto</option>
+				</select>
+				<input type="text" class="form-control" name="quantidade" placeholder="Quantidade" ng-model="item.quantidade" ng-required = "true">
+				<button type="submit" class="btn btn-success btn-block" ng-click="adicionarItem(item)" ng-disabled="formCadastroPedido.$invalid">Adicionar Item</button>
+        </div>
+           
+
+        <button type="submit" class="btn btn-success btn-block" ng-click="cadastrarPedido(pedido,item)" ng-disabled="formCadastroPedido.$invalid">Cadastrar</button>
+        <a href="#/pedidos"><button class="btn btn-danger">Voltar</button></a>
+</form>                                           
+
