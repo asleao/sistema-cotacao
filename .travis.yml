@@ -1,28 +1,24 @@
 dist: trusty
 language: python
 python:
-  - '3.5'
+- '3.5'
 jdk:
-  - oraclejdk8
+- oraclejdk8
 addons:
   apt:
     packages:
-      - oracle-java8-installer
+    - oracle-java8-installer
   sonarqube: true
-  
 env:
   global:
-  - secure:$SONAR_TOKEN 
-  
+  - secure: mSiOsKJ6JgbDYOEOGhtkOXUFgZFbyADKzh0af7cHgyOWcKJhfgFz3DEa67Fs/pUdt5SKsdpJhAn+0wNoj8bJCxBYw1H6gjZyX5pX8UoTmFRBEOb/ITYDntnpZngejpTrhUxRLln9nWrZuOBWBpuz8aHnVVTmIijWaN9ADv8GKXgBAPcWY81+dgdEPpjqQhsGKTf4cSDyCwNNcZ3YL5evmJ8H4QHoOpofjwF7X+gOv8uDVavFpJQIZ6Wf6NGcloOp+U8Ztt+1odsXPaYhTOo1TMeGQihBaz1pLhIvPRPAGgP41d/HeqiLppdlzvhdqN3O1El214YUAsAYzIqNPN3HTdQV0HzezNX0EecfRApf4iou10vKgC4gBqiks9C1heaVVDbJL1VDjXGwd/oz/IMNJ82D3ZAEqwC2D7rfUAAlezp9CUcKpFerp5BhorjrPpGVxZf7cQJoqybCIL//f9rKvmz0MlyXZbRZ5HZaPu0r3gEz84InQREIZghkeE1EtgNnOoyerm1iUDmJQdv9zG/D6Ok2XOyYGgK1wkPpGgFhCRi/wzE0g8ixUzhpaJb1X1v3HBvYhdKT9De69YKo2/jkFEBwPnM1c/EzSAcxNZkPxbJdNBa0/BRrgDXeXJhhkkP/j6hrwCFZ9fg4jg3gcpYDN+vZqsSgDnIZILaBFVVaxh8=
+
 branches:
   only:
   - master
-
 install:
-  - pip install -r requirements.txt
-
+- pip install -r requirements.txt
 before_script:
-  - export JAVA_HOME=/usr/lib/jvm/java-8-oracle
-
+- export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 script:
-  - sonar-scanner -Dsonar.login=$SONAR_TOKEN
+- sonar-scanner -Dsonar.login=$SONAR_TOKEN
