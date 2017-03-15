@@ -20,4 +20,4 @@ install:
 before_script:
 - export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 script:
-- sonar-scanner -X -Dsonar.login="19d81b1836e485812dd6cdb7ca5bf875f154d366"
+- sonar-scanner -X -Dsonar.login=$SONAR_TOKEN
