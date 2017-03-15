@@ -6,7 +6,9 @@ python:
 jdk:
 - oraclejdk8
 addons:
-  sonarqube: true
+  sonarqube:
+    token:
+      secure: Dz8aIy2j8a2s8I3hGbbGz1e7xT5ZLJhMSHXa6RPXp9VftFSWLg7bcUXvV3VfQ2MdzX0vPcKm9ycGvWhKnkZn0LvHHXuEcIQJbbnLyKiVgpDO7jn1FJ+kpmahq75jFW0+YcE8QXzmcoC/5EqzoU9qiCNJ5ZMEGInlGJtnZxcfwR8h7342Lste+lU1kbBWwVredVDCQRRFml1T9b5rxNAIaAnAZVDabnmjVu3A+gH/eFoxIiydyv4APQkGAgNndbCtbEC5ERfUg3a9kee3auxxKo0M5dx/MiAZQ7c/78yk0AkpeIP9hbhy5+7cdWjE/hVhMo6Pa/Z/9qGZ69yn4P/9BvWWeQ7VKogqIXnUqptDE9esNHC4PXPQf5rhskD2gHN6HhY8BD/J2OD6I1Hk4MItxy44Lhqxe7DaoVjDpl7/ZsXscc9Dt+KdlYgICRHP2143shaR3YAc6VmIEW9sg3vDHLl+RykN2r90TXqVe1+N/kaoKgQEhbuh5XgvGi0d1WrxQUrQtoqAxO7C6Muh6f2UnZkd04pwJehJS+LC0UA2IL3tB1OKjfuys8jWeRnxQlapIhiVxxSWW1x/aGrEAHwL0F8kDpa2cmVbC9ZF1r64scdpmvIt64Fp0PxcwTkGzT7Wg9PFfhI8X1XX6fsmY2BLh72TsB5RkWVInRKcnUp1AiE=
 branches:
   only:
   - master
@@ -14,6 +16,3 @@ install:
 - pip install -r requirements.txt
 script:
 - sonar-runner -Dsonar.host.url=https://sonarqube.com -Dsonar.login=$SONAR_TOKEN
-env:
-  global:
-    secure: Dz8aIy2j8a2s8I3hGbbGz1e7xT5ZLJhMSHXa6RPXp9VftFSWLg7bcUXvV3VfQ2MdzX0vPcKm9ycGvWhKnkZn0LvHHXuEcIQJbbnLyKiVgpDO7jn1FJ+kpmahq75jFW0+YcE8QXzmcoC/5EqzoU9qiCNJ5ZMEGInlGJtnZxcfwR8h7342Lste+lU1kbBWwVredVDCQRRFml1T9b5rxNAIaAnAZVDabnmjVu3A+gH/eFoxIiydyv4APQkGAgNndbCtbEC5ERfUg3a9kee3auxxKo0M5dx/MiAZQ7c/78yk0AkpeIP9hbhy5+7cdWjE/hVhMo6Pa/Z/9qGZ69yn4P/9BvWWeQ7VKogqIXnUqptDE9esNHC4PXPQf5rhskD2gHN6HhY8BD/J2OD6I1Hk4MItxy44Lhqxe7DaoVjDpl7/ZsXscc9Dt+KdlYgICRHP2143shaR3YAc6VmIEW9sg3vDHLl+RykN2r90TXqVe1+N/kaoKgQEhbuh5XgvGi0d1WrxQUrQtoqAxO7C6Muh6f2UnZkd04pwJehJS+LC0UA2IL3tB1OKjfuys8jWeRnxQlapIhiVxxSWW1x/aGrEAHwL0F8kDpa2cmVbC9ZF1r64scdpmvIt64Fp0PxcwTkGzT7Wg9PFfhI8X1XX6fsmY2BLh72TsB5RkWVInRKcnUp1AiE=
