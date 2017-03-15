@@ -8,9 +8,10 @@ addons:
   apt:
     packages:
     - oracle-java8-installer
-  sonarqube: 
-    token: HfQ+suX8syPTfrsLfy0pLTnVxPRvJWJSDOXKn6wuywaHs6bXHC7SBp23BWTiYIf6GdGoteC6AMPME+pGBKNZMJZTKOGXKSVdUm2Nd8lJGwH1DXiye5Cf0NeCLmrFWfFJPDMC2jK0PQHhUDvRV/lF/BHWyomuAeA5U/njM6jkbWyxqDBehoB4xa3va77s4idfLDF7xGUrE0mnKktZ9/MpBrs/uW2lcH4lc5il1cz24U8mafN1eSwJyGaTyUsHEo0BpcpSpy9FuWGRAUfTOcUSZ1+PVJoDA9UO3IfB8PB5T0rU5u6usw+YVPgKJl/uVg2ilGo9rPdfHwXTg4EV6LrYq1w8cNbc7IsuJPiG2wRJFlqA0v79FhEvjhrmH+7R9JnXKpxcbpW/kXGyWfeec5hICreaNYWp11SlqrTE5zHNk3klRWb2174SUfMh7ij1od8z8I8jf85fDKv4QvxGdOKKKzyt+UzjBh9twbiN5H9gd0D7Hm+Aj9xvTg6HraYPqGEuuvWfu7X6/BSvT6vZI/G5N8JbGNL+fT6njiuwHd6KF2sMlzGOYM6lKtC9OVJsmBI0JoQPbHsxKnUS75tUFMkc4d+v9U5TQdEQZIoY3bF2aDBWqtkNGZR/4f5DCwbhsf7T9k8Uz4SHZFPkjCfA0elnLqdFjTMYWuAQdoerCOjquMs=
-    
+  sonarqube: true
+env:
+  global:
+    secure: fy3GqayZqlgVhESvwf4hEEZNl5oCtfLcYgJMIw2tQIYl70XnsWVwHckVTMbSoYASOCnVZf4vsmvH13Mwo7pka1f9G6i4uHpCbxCYIdNe886wDLrpEiUsXwmeFIDwcXsHAJKtd/X3QDOgauskfARMe0JhK7kTvu31OoKK9TV02IbhtdLCUCiLthiEE5kEehwkuMVvU88YDa2aXoSQJCLX3s4KLrimFw7QvUTseMaw25XPfVvh/IZiKo5Z5qLgFJB4FXK8apJI4ob9RCqrnEpsVRMsrrPBfPfH/oVMEL+zQWDe2P21xoZeS6Eaubpoh1YnO4hey8saQ34u7xCBoLrWgYdQtJpEmYeuxnSR3g3dIGxWxJcRF4uNXpMV6qIoF+CHnlrEPEfG2t56yZV0WPW4AolNX7AeHXeZsddjN0gSYbJHBJUMSik9F9ysibLYBS/pYggef9XpHpW+WIVFCgQWRc/MtoSuiNyC3+ig/0IvCVAOoU8OCIR+q4g6NZ8a83hQO95sed2kS7vn4MT9MtXNv5XxsqykyKebukCPxOdJEfYV42rGzxjAoLoQdJ8urJ1Jkd4J2yZeB4UWx+78Go7D1Eo0SX9FrErGYhwfcKEscgN/CECCFU8gJq/kevENYy3NObVo+kandtv9Gd4CMeoqeyA9/UtDS9cIhR7WiaeEq94=
 branches:
   only:
   - master
@@ -19,4 +20,4 @@ install:
 before_script:
 - export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 script:
-- sonar-scanner -X -Dsonar.login=4d3d65e865d3c52cc7e1e764f8a8c867bce14181
+- sonar-scanner -X -Dsonar.login=19d81b1836e485812dd6cdb7ca5bf875f154d366
