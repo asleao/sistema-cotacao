@@ -16,4 +16,4 @@ branches:
 install:
 - pip install -r requirements.txt
 script:
-- sonar-runner
+- sonar-runner -Dsonar.login=$SONAR_TOKEN
