@@ -8,7 +8,7 @@ jdk:
 addons:
   sonarqube:
     token:
-      secure: cb4IgjLh6srCnFnLfynQfuHYmkO1TxXhzTzvXo0uogv/uvCw9i8Xjcmm7oBfkiIooU0nbd1jNifr23vaUfrldWKjmVj6t3xE8SVUIwSKShlt+53yawC/2wmzRwVDFRrb529sc6ntXD/fTJR1chrgHh4Id5z+Mer3ODyZSglThml60nCnw+GPNpPo4Xrrm8Qm2r4VQKctvMQJJKgYlavXOyw7hvi5yNrIDu19qEGdfrh3f8R4t7Ezmyg0YesixESSWQjk/lgWNna8lx1V1l0hkN8F8qBvEm2fO4+iBRxCa9nccUeb9azhiwjHlJloYNDduovBkFOXUs1GyRH+Xhj2zNSPXI+0CoLipfP7q1Y5CMEkeoOfqgfw0evGk89AJw0+BxPiSQLGfnjdZ9FmDxDLrDIx8Pn280cX9j16G/1yrF8uOESzV9e4WXm4w8Ki2w/xuebNI4oWzl3WXL0S/RKr5W+p6ssJcklG8EsHHodVTbX6a6rliBTOY32ET6PLBVngx8c44pD+W0ibS+mJsBV1nFISMRCSQQwiL2EVZWBEvjMPHutxF/7BigPB9FiUsG2lzstU8K0OSeR0wkjP8lr3BeE5GZE9XpoGhLKSu0qjwhq8HFVLYsRm59Wkyu4zj2UKH+SQP8IgWBoF02eepbmMSYOalur3VVfkBZuRnFJOkas=
+      secure: $SONAR_TOKEN
 branches:
   only:
   - master
