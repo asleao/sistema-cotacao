@@ -9,9 +9,6 @@ addons:
     packages:
     - oracle-java8-installer
   sonarqube: true
-env:
-  global:
-    secure: dwAO0K/zdHk69DrIMeHGzzE2Ze/NrxuN37aIAYRhWCFqc1kswM1RRw9+Z3JgjlhGoaYNOyaKFBQ427l2mmQDks5zusO4c1uz7YzeAePUF8YM0d2Qab4DpPtzGCL0w/assQEOD2faEjjRlJwBWFz9CAjae14aAmehR6Sw56u21gkFG9D+mX2SiE1D6wEiXprD3/HSIF8CiRBTNlF6nozjvGWHBXIQGfViJXYgvsqkNN1mVKmNYoElQlZfOtlompXsy1wJmZcZpFN8bCzyO3c6XsEh9Bof4R60FzIWzTxdfbIUGvQUDpBTMzgWDUyJmS6n1lgKqUTwEd7YNOmoSGkRnylghE80LKSa/1/1s9Ec3O8C1G0/YP58x1SVjjbPCI4KVwOdWbA0SW8qYWP761s0tMdamkd9Ht/83Lny8kIiT0NGJYfZqAvbRjLJTH59biqRRE7Qn9mcx0b+KRacqTUYT/6FMmPPS/fnXyZ2stCyFGmSJ79O9+GoNpXsbW7ZHXp/uhAWQ1aKwA3No2JAMQlVnmzbAVH2VlvASrvU+iMj7RlcrhHtqAaK9VjsFDRitu1jijp7fY0uPaa/X4kM+8fUwPvmmNMAAsQG325qKVIacBzmSmMqpEKBC4z53ziWJWnOLx/OdiE+evbnMvoobIELzbPRpJtqBEK2oRs83J28gUw=
 branches:
   only:
   - master
@@ -21,4 +18,6 @@ before_script:
 - export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 script:
 - sonar-scanner -Dsonar.login=$SONAR_TOKEN
-
+env:
+  global:
+    secure: WS90c6pzAG5ZP0idbXbniBopSlGw7a6g8Tc+wM2EG0g8RlGyk7Ees0w+87EMEkFUGwuarDCPEbju28ovGcGTgWLd5ibeWkPkwsoNy8PGnwuKSClf+ewHe2UNUjt2KIgO6sDQ+nAu3e0a7/KKntps6oYhGs0Sw4Nh/8YqOU+Des2d4iJLi69iBFlYk40yfME/ZX40jyppL8BZwgY5tmyU40mXu8UnkyFhe+QoqEixK8SNDqYGkNwllLD6jHu34OWPmzEK1YLVEP53WhkWVHKqJ6exVTHR9Yp+jTpjaHWS8DXyJtAB7d5Fm+hiEAcZWD2I2egOBgSwhEb5lz+sWPj/JQQbneIxtd6S/EbWxOGsxCufn6vp9epY05mUVj7cc9x+NUPdL8XGd7GoYArHkjZn9e8JOKQZe4WN2IMfQkTe+9XIDMNgUTDW/JKCtxDokvn9ALxKWrhvSRyQMhGqQ/jo/8yKjwXFKMaODRiDVM3Ob6yJRVqzvULdWJBBo08e1N0besUi88dvmZ/61zpm9UuZfodIWH4xF09z6ss3FL4TcXi+0WqbF5fISwe5/JiL9wXR9lMTxcfTa8Z9L45LJK0QTyZcu/yXvfxCNqfLdSIxihgpD16j1zvi4TFretlsA8Whh0rvht5bxf1xwqU5wpXP/jHxmMLja16S8OcOKjDez48=
