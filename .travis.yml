@@ -4,14 +4,12 @@ python:
 - '3.5'
 jdk:
 - oraclejdk8
-env:
-  global:
-    secure: UjWx3ZHW/PZIaxPNHFKqLFRbZqHMw6veXxAV7AwUDthO/keRXL1KnFNJPKQt8HiY3gAoX34lH3eyHuzLYj2ikp6zSwWTEEN4UyugMWIH/Rjh/cE4r6gtOp/K7/KKqmrDZuWYsa77TPcfiTOTSdZu7GVguKkNQb5RrJZiLBrOWGqDEoACXTXBzJnz4PsveAsERDgtkRwkpxFqXcgRbq9RvpepSa3fhst/XSTRwFxA/qmfQa1IBRCZ2IPTO2mntD6xhTdAoPI2VGGOaRoJJfsnu/gDENkwv+z79lPak9RtuGOKdAt2Jxs/mTAtb7dm2m5J0Nms1PB/Ab3qHUOQJnkT97aqFJtTc2zxxJCyjo5yv93c7uyXs3JqYlj6XTZFBA8U1T+JcWjeIWfLdi0FYd57HG6Qgc7th/sU35hVG6oTJD03ylRZ8kTmHvdkfNsUJULlhgnt+wpOuQHpCgXt8uYrEgdQ6cA/70rzIMtg1dUSODS2KLAnUbFUGb6hjXdFLO75c+36a66b8LxWTg18lJuPaPhk+rwzgrss8s1sl9eLU5MgozQ38ptqjHblnsHSTsQtgn8UbwyEdo1eVRCSsHnofOT27sx22/t1sK7Dl0GmRBNpkcEAUXthAG4PQk3RKNsT+LaWWbW9/A6V0T/4kHLpxgnGFUmapIyayf8VSDtqiYI=
 addons:
   apt:
     packages:
     - oracle-java8-installer
-  sonarqube: true
+  sonarqube:
+    token: 4d3d65e865d3c52cc7e1e764f8a8c867bce14181
 branches:
   only:
   - master
