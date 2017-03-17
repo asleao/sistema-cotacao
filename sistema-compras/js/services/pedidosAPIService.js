@@ -1,4 +1,4 @@
-angular.module("sistemaFornecedor").service("pedidosAPI",function($http, config){
+angular.module("sistemaCompras").service("pedidosAPI",function($http, config){
   
    this.getPedidos = function(){
         return $http.get(config.baseUrl + "/pedido/?format=json");

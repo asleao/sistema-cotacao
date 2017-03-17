@@ -1,4 +1,4 @@
-angular.module("sistemaFornecedor").config(function($routeProvider){
+angular.module("sistemaCompras").config(function($routeProvider){
         
         $routeProvider.when("/clientes",{
             templateUrl:"view/cliente.html" ,
