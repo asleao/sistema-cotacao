@@ -15,7 +15,10 @@ angular.module("sistemaCompras").config(function($routeProvider){
             controller: "pedidoCtrl" ,
             resolve:{
                     pedidos: function(pedidosAPI){
-                            return pedidosAPI.getPedidos();
+                        return pedidosAPI.getPedidos();
+                    },
+                    clientes: function(clientesAPI){
+                        return clientesAPI.getClientes();
                     }
             }             
         });
@@ -25,17 +28,28 @@ angular.module("sistemaCompras").config(function($routeProvider){
             controller: "paginaPedidoCtrl" ,
             resolve:{
                     pedido: function(pedidosAPI, $route){
-                            return pedidosAPI.getPedido($route.current.params.id);
+                        return pedidosAPI.getPedido($route.current.params.id);
                     },
                     itens: function(pedidosAPI){
-                            return pedidosAPI.getItens();
+                        return pedidosAPI.getItens();
                     }
             }
         });
 
-        $routeProvider.when("/pedido/adicionar",{
+        $routeProvider.when("/adicionarPedido",{
             templateUrl:"view/adicionarPedido.html" ,
-            controller: "pedidoCtrl"                         
+            controller: "pedidoCtrl",
+            resolve:{
+                    pedidos: function(pedidosAPI){
+                        return pedidosAPI.getPedidos();
+                    },
+                    clientes: function(clientesAPI){
+                        return clientesAPI.getClientes();
+                    },
+                    produtos: function(produtosAPI){
+                        return produtosAPI.getProdutos();
+                    }
+            }                          
         });
 
         $routeProvider.otherwise({redirectTo: "/index"});      
