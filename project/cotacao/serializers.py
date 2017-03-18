@@ -27,8 +27,15 @@ class PedidoSerializer(serializers.ModelSerializer):
        
 
 class ItemSerializer(serializers.ModelSerializer):
-    pedido = PedidoSerializer(read_only=True)
-    produto = ProdutoSerializer(read_only=True)
+    pedido = PedidoSerializer()
+    produto = ProdutoSerializer()
     class Meta:
         model = Item
-        fields = ('pedido', 'codigo', 'produto','quantidade')
+        fields = ('pedido', 'codigo', 'produto','quantidade')        
+    def create(self, validated_data):
+        pedido_data = validated_data.pop('pedido')
+        pedido = Pedido.objects.get(codigo=pedido_data['codigo'])        
+        produto_data = validated_data.pop('produto')
+        produto = Produto.objects.get(codigo=produto_data['codigo'])
+        item = Item.objects.create(pedido=pedido,produto=produto)
+        return item

@@ -2,7 +2,7 @@ angular.module("sistemaCompras").controller("pedidoCtrl", function($scope,pedido
     $scope.pedidos= pedidos.data;
     $scope.clientes = clientes.data;
     $scope.produtos = produtos.data;
-    $scope.itens =[];
+    $scope.itens=[];
 
 	$scope.adicionarItem = function(item){
 		$scope.itens.push(angular.copy(item));		
@@ -12,7 +12,10 @@ angular.module("sistemaCompras").controller("pedidoCtrl", function($scope,pedido
 
     $scope.cadastrarPedido = function (pedido,itens) {	
     	pedido.dataCriacao = new Date();
-		pedidosAPI.cadastrarPedido(pedido,itens).success(function (data) {
+		pedidosAPI.cadastrarPedido(pedido).success(function (data) {
+
+		});		
+		pedidosAPI.cadastrarItens(itens).success(function (data) {
 
 		});
 	};		  

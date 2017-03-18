@@ -4,7 +4,6 @@ django-cors-headers==2.0.2
 djangorestframework==3.5.4
 httpie==0.9.9
 packaging==16.8
-pkg-resources==0.0.0
 Pygments==2.2.0
 pyparsing==2.1.10
 requests==2.13.0
