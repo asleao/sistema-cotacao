@@ -18,7 +18,12 @@ class PedidoSerializer(serializers.ModelSerializer):
     cliente = ClienteSerializer()
     class Meta:
         model = Pedido
-        fields = ('codigo', 'cliente','dataCriacao')      
+        fields = ('codigo', 'cliente','dataCriacao')
+    def create(self, validated_data):
+        cliente_data = validated_data.pop('cliente')
+        cliente = Cliente.objects.get(nome=cliente_data['nome'])
+        pedido= Pedido.objects.create(cliente=cliente)
+        return pedido          
        
 
 class ItemSerializer(serializers.ModelSerializer):

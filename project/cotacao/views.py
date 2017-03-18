@@ -6,7 +6,7 @@ from .models import Cliente,Pedido, Item, Produto
 # Create your views here.
 class ClienteList(generics.ListCreateAPIView):
     queryset = Cliente.objects.all()
-    serializer_class = ClienteSerializer
+    serializer_class = ClienteSerializer    
 
 
 class ClienteDetail(generics.RetrieveUpdateDestroyAPIView):    
@@ -33,7 +33,7 @@ class ItemDetail(generics.RetrieveUpdateDestroyAPIView):
 
 class PedidoList(generics.ListCreateAPIView):
     queryset = Pedido.objects.all()
-    serializer_class = PedidoSerializer    
+    serializer_class = PedidoSerializer  
 
 class PedidoDetail(generics.RetrieveUpdateDestroyAPIView):    
     queryset = Pedido.objects.all()
