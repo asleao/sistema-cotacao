@@ -19,6 +19,9 @@ angular.module("sistemaCompras").config(function($routeProvider){
                     },
                     clientes: function(clientesAPI){
                         return clientesAPI.getClientes();
+                    },
+                    produtos: function(produtosAPI){
+                        return produtosAPI.getProdutos();
                     }
             }             
         });

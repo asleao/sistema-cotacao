@@ -13,12 +13,22 @@
                 <select class="form-control" ng-model="item.produto" ng-options="produto.descricao for produto in produtos">
 			<option value="">Selecione um Produto</option>
 		</select>
-		<input type="text" class="form-control" name="quantidade" placeholder="Quantidade" ng-model="item.quantidade" ng-required = "true">
+		<input type="text" class="form-control" name="quantidade" placeholder="Quantidade" ng-model="item.quantidade">
 		<button type="submit" class="btn btn-success btn-block" ng-click="adicionarItem(item)" ng-disabled="formCadastroPedido.$invalid">Adicionar Item</button>
-        </div>
-           
+        </div>           
 
-        <button type="submit" class="btn btn-success btn-block" ng-click="cadastrarPedido(pedido,item)" ng-disabled="formCadastroPedido.$invalid">Cadastrar</button>
+        <table class="table table-hover">
+                <tr>    
+                        <th>Produto</th>
+                        <th>Quantidade</th>                                
+                </tr>
+                <tr ng-repeat="item in itens">                                                        
+                        <td>{{item.produto.descricao}}</td>
+                        <td>{{item.quantidade}}</td>                                
+                </tr>
+        </table>                
+        
+        <button type="submit" class="btn btn-success btn-block" ng-click="cadastrarPedido(pedido,itens)" ng-disabled="formCadastroPedido.$invalid">Cadastrar</button>
         <a href="#/pedidos"><button class="btn btn-danger">Voltar</button></a>
 </form>                                           
 

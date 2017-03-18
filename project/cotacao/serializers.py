@@ -15,10 +15,11 @@ class ProdutoSerializer(serializers.ModelSerializer):
         fields = ('codigo', 'descricao','marca')
 
 class PedidoSerializer(serializers.ModelSerializer):    
-    cliente = ClienteSerializer(read_only=True)
+    cliente = ClienteSerializer()
     class Meta:
         model = Pedido
-        fields = ('codigo', 'cliente','dataCriacao')
+        fields = ('codigo', 'cliente','dataCriacao')      
+       
 
 class ItemSerializer(serializers.ModelSerializer):
     pedido = PedidoSerializer(read_only=True)
