@@ -2,6 +2,11 @@ from django.shortcuts import render
 from rest_framework import generics
 from .serializers import ClienteSerializer,ItemSerializer,PedidoSerializer,ProdutoSerializer
 from .models import Cliente,Pedido, Item, Produto
+from django.http import JsonResponse
+
+def get_pedido_last_id(request):   
+    pedido = Pedido.objects.latest('codigo');  
+    return JsonResponse({'codigo':pedido.codigo})
 
 # Create your views here.
 class ClienteList(generics.ListCreateAPIView):

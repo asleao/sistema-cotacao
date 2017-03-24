@@ -1,9 +1,9 @@
-angular.module("sistemaCompras").controller("pedidoCtrl", function($scope,pedidosAPI,clientesAPI,produtosAPI,pedidos,clientes,produtos,$location){
+angular.module("sistemaCompras").controller("pedidoCtrl", function($scope,pedidosAPI,clientesAPI,produtosAPI,pedidos,clientes,produtos,lastId,$location){
     $scope.pedidos= pedidos.data;
     $scope.clientes = clientes.data;
     $scope.produtos = produtos.data;
     $scope.itens=[];
-
+    var id = lastId.data.codigo+1;	
 
 
 	$scope.adicionarItem = function(item){		
@@ -19,9 +19,8 @@ angular.module("sistemaCompras").controller("pedidoCtrl", function($scope,pedido
     	$scope.pedido.dataCriacao = new Date();
     	$scope.pedido.cliente=$scope.pedido.cliente.codigo;    	
 		pedidosAPI.cadastrarPedido(pedido);
-		angular.forEach($scope.itens, function(value, key) {
-		  console.log($scope.pedido);			  
-		  var item = {pedido:$scope.pedido.codigo,produto:value.produto.codigo,quantidade:value.quantidade}		  	  		  		  
+		angular.forEach($scope.itens, function(value, key) {		  	  			  
+		  var item = {pedido:id,produto:value.produto.codigo,quantidade:value.quantidade}		  	  		  		  
 		  pedidosAPI.cadastrarItem(item);
 		});						
 	};		  

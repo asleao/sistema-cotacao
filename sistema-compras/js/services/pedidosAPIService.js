@@ -19,4 +19,8 @@ angular.module("sistemaCompras").service("pedidosAPI",function($http, config){
     this.cadastrarItem = function(item){
         return $http.post(config.baseUrl + "/item/",item);      
     }
+
+    this.getUltimoPedido = function(){
+        return $http.get(config.baseUrl + "/pedido/last/");
+    }
 });

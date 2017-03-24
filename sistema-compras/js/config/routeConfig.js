@@ -22,6 +22,9 @@ angular.module("sistemaCompras").config(function($routeProvider){
                     },
                     produtos: function(produtosAPI){
                         return produtosAPI.getProdutos();
+                    },
+                    codigo: function(pedidosAPI){
+                        return pedidosAPI.getUltimoPedido();    
                     }
             }             
         });
@@ -51,6 +54,9 @@ angular.module("sistemaCompras").config(function($routeProvider){
                     },
                     produtos: function(produtosAPI){
                         return produtosAPI.getProdutos();
+                    },
+                    lastId: function(pedidosAPI){
+                        return pedidosAPI.getUltimoPedido();    
                     }
             }                          
         });

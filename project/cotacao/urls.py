@@ -11,6 +11,7 @@ urlpatterns = [
 	url(r'^item/(?P<pk>[0-9]+)/$',views.ItemDetail.as_view()),
 	url(r'^produto/$',views.ProdutoList.as_view()),
 	url(r'^produto/(?P<pk>[0-9]+)/$',views.ProdutoDetail.as_view()),
+	url(r'^pedido/last/$',views.get_pedido_last_id),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
