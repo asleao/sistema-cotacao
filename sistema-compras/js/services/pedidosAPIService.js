@@ -15,7 +15,8 @@ angular.module("sistemaCompras").service("pedidosAPI",function($http, config){
     this.cadastrarPedido = function(pedido){
     	return $http.post(config.baseUrl + "/pedido/",pedido);    	
     }
-    this.cadastrarItens = function(itens){        
-        return $http.post(config.baseUrl + "/item/", itens);
+
+    this.cadastrarItem = function(item){
+        return $http.post(config.baseUrl + "/item/",item);      
     }
 });

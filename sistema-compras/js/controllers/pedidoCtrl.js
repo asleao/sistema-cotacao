@@ -4,19 +4,25 @@ angular.module("sistemaCompras").controller("pedidoCtrl", function($scope,pedido
     $scope.produtos = produtos.data;
     $scope.itens=[];
 
-	$scope.adicionarItem = function(item){
-		$scope.itens.push(angular.copy(item));		
+
+
+	$scope.adicionarItem = function(item){		
+		$scope.itens.push(angular.copy({
+              produto: $scope.item.produto,
+              quantidade: $scope.item.quantidade
+          }));		
 		delete $scope.item;
 		$scope.formCadastroPedido.$setPristine();
 	};
 
     $scope.cadastrarPedido = function (pedido,itens) {	
-    	pedido.dataCriacao = new Date();
-		pedidosAPI.cadastrarPedido(pedido).success(function (data) {
-
-		});		
-		pedidosAPI.cadastrarItens(itens).success(function (data) {
-
-		});
+    	$scope.pedido.dataCriacao = new Date();
+    	$scope.pedido.cliente=$scope.pedido.cliente.codigo;    	
+		pedidosAPI.cadastrarPedido(pedido);
+		angular.forEach($scope.itens, function(value, key) {
+		  console.log($scope.pedido);			  
+		  var item = {pedido:$scope.pedido.codigo,produto:value.produto.codigo,quantidade:value.quantidade}		  	  		  		  
+		  pedidosAPI.cadastrarItem(item);
+		});						
 	};		  
 });

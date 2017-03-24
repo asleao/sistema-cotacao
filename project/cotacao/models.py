@@ -19,23 +19,18 @@ class Produto(models.Model):
     def __str__(self):
         return self.descricao
 
-
 class Pedido(models.Model):
-    cliente = models.ForeignKey(Cliente, related_name='cliente')     
+    cliente = models.ForeignKey(Cliente, related_name='cliente')         
     codigo = models.AutoField(primary_key=True)   
     dataCriacao = models.DateField(auto_now_add=True)
 
     def __str__(self): 
         return str(self.codigo)
 
-class Item(models.Model):
-    pedido = models.ForeignKey(Pedido, related_name='pedido')
+class Item(models.Model):    
+    pedido = models.ForeignKey(Pedido, related_name='pedido',null=True) 
     codigo = models.AutoField(primary_key=True)
     produto = models.ForeignKey(Produto, related_name='produto')
     quantidade = models.PositiveIntegerField(default=0)
     def __str__(self): 
         return str(self.codigo)
-
-
-
-
