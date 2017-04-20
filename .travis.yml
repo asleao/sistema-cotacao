@@ -21,6 +21,6 @@ deploy:
   provider: heroku
   api_key:
     secure: eo+JxP/wUt32fN3PNmstlCOIp8lVIL2dSFO9lN+4ewwDZs02xGkEkiMGxCzWYjqy7Pb3kKvj/r6PEPHEWeU+62IT3XKhfXp4xwDdipaamkwdgmCxXKzmaB6G0QPqoT8UlShgHYG+M/KkzENDXDmsBcR3sKS/C1k6w3cQVyiF6bqyFDZoy4fZ8C9i4zbNdMDIza4lUfq+I4A1qTJQEZnXxIkSErjWQeVR+V3PwqVNzkIusgdCvRJB1JGDc7cdf9ybGAJH8dA7VbPRc4Giur2wTcBEOK2CZlWKJ+b/FghM1Oss6yeXia1zBmOCuCP6ElTGqsbWt0tRQXX9K15dWu0SEMAwBZ7HuLL+e8bVZf28A3suILtGmgsBHB/gBEXnOOzmsTKZnt9ayVKrFnWgsREneoxDBpWODhbpzxsNh5Iyenusqg/XTsSuWIO7gDZ5Ay30DnECbtCSfo3VvKloc4hENDCx7LAkCdDZIQiM+Mzgvh78WNHv2rvPQJ/U7UXFqxlWb+IdBdPQmNwJH62wXhiAEgaeBmVwsPKHR1BHA7yz6nU7omu3DIxTrGSUwDCmlUnQ9mU4ZvpEIyKu+QzAwYB5fZrqhqOt7Y3KRVub+5Jq9nAn7IvkJp+hLNIufhf5lP6E2mpRR3Fq4Clb8z355h8TYlxDPgjfnXRKgT/V6xwl7n4=
-  app: sistema-cotacao
+  app: sistema-cotacao-api
   on:
     repo: asleao/sistema-cotacao
