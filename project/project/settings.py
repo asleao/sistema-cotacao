@@ -154,3 +154,5 @@ CORS_ALLOW_METHODS = (
 CORS_URLS_REGEX = r'^/cotacao/.*$'
 
 CORS_ORIGIN_ALLOW_ALL = True
+
+ADMIN_SITE_HEADER = "Sistema Cotação"
