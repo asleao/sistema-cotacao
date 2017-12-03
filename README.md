@@ -7,6 +7,3 @@ Este projeto irá desenvolver uma API para um sistema de cotação utilizando a 
 O objetivo deste projeto é fazer com que o sistema de cotação envie um pedido para um sistema fornecedor. A comunicação será feita utilizando o protocolo http onde o sistema cotação disponibiliza seus pedidos, no formato JSON, e o sistema fornecedor mostra pedidos feitos.
 
 Toda documentação deste projeto encontra-se no [link](https://asleao.gitbooks.io/sistema-cotacao/content/).
-
-Teste.
-
